@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Passionate about Android Development.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Currently looking for Android Developer job.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[tomaszkolbusz1@gmail.com](mailto:tomaszkolbusz1@gmail.com)
