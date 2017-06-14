@@ -19,15 +19,14 @@ If you are getting gradle sync errors consider adding this your gradle file.
 
 <b>2. Setting up Entities. </b>
 
-Here you can set up list of columns in the table you are going to use in your database. 
+Here you can set up list of columns in the table you are going to use in your database. Some member has to be @PrimaryKey, you can auto increment primary keys if they are Integer type adding @PrimaryKey(autoGenerate = true).
 <script src="https://gist.github.com/TKolbusz/b51e46fbc94c470bcdf5346731fcaac9.js"></script>
 
 <b>3. Setting up Dao.</b>
 
 Here you can list all database queries that you are going to use for specific table.
 
-Simple @Insert @Update, @Delete or custom @Query annotation will generate all SQLite
-boilerplate for you. Note that, Room will not compile if you make a typo, so that’s great!
+Simple @Insert @Update, @Delete or custom @Query annotation will generate all SQLite boilerplate for you. In @Update and @Insert you can specify what happens during conflict. I'm using REPLACE. Note that, Room will not compile if you make a typo, so that’s great!
 In my version of Room there is a problem with referencing arguments in Query by name, but you can reference them by index, arg0 arg1 and so on.
 <script src="https://gist.github.com/TKolbusz/5e1f0da09917c61bfc47ee478fa90d52.js"></script>
 <b>4. Setting up Database class.</b>
@@ -40,7 +39,9 @@ All you need to do here is connect all your Dao’s and Entities and that’s it
 You can create Database object using Application Context, I’m injecting it with Dagger2 in top level component, but you can just create it in Application onCreate() for it to be Singleton.
 
 <script src="https://gist.github.com/TKolbusz/646222863e462409fee4f79495412412.js"></script>
- The next usage step is just subscribing to Flowable stream provided by Room, note that in auto-generated RxRoom class, subscribeOn() is already called with background thread, so now you can just add observeOn(AndroidSchedulers.mainThread()), for your data to be caught in main thread. <script src="https://gist.github.com/TKolbusz/1c29403665b59fb893bd104394ae48a6.js"></script>
+Your dao instances are accessible through database object.
+
+The next usage step is just subscribing to Flowable stream provided by Room, note that in auto-generated RxRoom class, subscribeOn() is already called with background thread, so now you can just add observeOn(AndroidSchedulers.mainThread()), for your data to be caught in main thread. <script src="https://gist.github.com/TKolbusz/1c29403665b59fb893bd104394ae48a6.js"></script>
 Important thing is that, Room will stream empty list if database is empty or if it haven’t found any data with specified query.
 
 <b>6. Why Flowable? </b>
