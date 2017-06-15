@@ -2,7 +2,7 @@
 layout: post
 title: Controlling database flow using Room and RxJava2
 ---
-Google has recently improved their Android library arsenal. They introduced Room Persistence Library, that provides easy to deal with layer over SQLite. Introduction of Room had in mind that Android world is asynchronous and [reactive code](http://reactivex.io) grows in popularity.
+Google has recently improved their Android library arsenal. They introduced Room Persistence Library that provides easy to deal with layer over SQLite. Introduction of Room had in mind that Android world is asynchronous and [reactive code](http://reactivex.io) grows in popularity.
 
 <b>TL;DR: In your Room’s table Dao, return Flowable&lt;List&lt;SomeEntity&gt;&gt; that will stream data of specified Query each time database is updated.</b>
 
@@ -17,7 +17,7 @@ Make sure to check out if there is newer version available.
 
 <b>2. Setting up Entities. </b>
 
-Here you can set up list of columns in the table you are going to use in your database. Some member has to be @PrimaryKey. You can auto increment primary keys if they are Integer type adding @PrimaryKey(autoGenerate = true).
+Here you can set up list of columns in the table you are going to use in your database. Some member has to be @PrimaryKey. You can auto increment primary keys if they are Integer type adding @PrimaryKey(autoGenerate = true). Room requires default constructor, thats why I had to add default value to each parameter.
 <script src="https://gist.github.com/TKolbusz/b51e46fbc94c470bcdf5346731fcaac9.js"></script>
 
 <b>3. Setting up Dao.</b>
