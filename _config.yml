@@ -18,7 +18,7 @@ avatar: https://avatars3.githubusercontent.com/u/10707925?v=3&u=5af448b87d609ee6
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: tomaszkolbusz1@gmail.com
   facebook:
   flickr:
   github: tkolbusz
@@ -41,7 +41,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url:
+url: http://tkolbusz.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
