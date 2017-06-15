@@ -29,7 +29,7 @@ In my version of Room there is a problem with referencing arguments in Query by 
 <script src="https://gist.github.com/TKolbusz/5e1f0da09917c61bfc47ee478fa90d52.js"></script>
 <b>4. Setting up Database class.</b>
 
-All you need to do here is connect all your Daos and Entities and that’s it, Room will generate all of the code for you. Implementation of specific classes are made with _Impl postfix(ex. ItemDao_Impl).
+All you need to do here is connect all your Daos and Entities and that’s it, Room will generate all of the code for you. Implementation of specific classes are made with _Impl postfix(ex. ItemsDatabase_Impl).
 <script src="https://gist.github.com/TKolbusz/8f4cff7c7c3cbf7c50bac8881c6e4ca3.js"></script>
 
 <b>5. Usage.</b>
