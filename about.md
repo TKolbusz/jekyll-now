@@ -8,7 +8,7 @@ Passionate about Android Development.
 
 ### More Information
 
-Currently looking for Android Developer job.
+Currently developing for GoPOS.pl
 
 ### Contact me
 
