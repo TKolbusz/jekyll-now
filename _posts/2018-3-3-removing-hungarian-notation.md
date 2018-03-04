@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Removing Hungarian Notation from Java project
+draft: true
 ---
 If you hate Hungarian notation for it's unreadable format, you might experience hard time replacing it into standard Google Java Style variable notation. I found myself in this situation.
 
@@ -26,6 +27,12 @@ Feel free to customize this script, add prefixes to search for as necessary. You
 Caveats:
 
 1. It will brutally replace hungarian notation in a given directory so be careful, have a backup. 
-2. If you have field assignment from setter/constructor like mValue = value; it will replace it with value = value; instead of this.value = value;, so be careful and test your code. Such bugs can be found by running IntelliJ's Structural Search with 'Variable is assigned to itself' lint.
+2. If you have field assignment from setter/constructor like 
+<script src="https://gist.github.com/TKolbusz/81d5688411c3cf9a0f47cb7e96966a5f.js"></script>
+it will replace it with 
+<script src="https://gist.github.com/TKolbusz/f9724807907322a69d54c4469935c063.js"></script> 
+instead of
+<script src="https://gist.github.com/TKolbusz/99f383b1392f948a79d98a55983241d0.js"></script>
+so be careful and test your code. Such bugs can be found by running IntelliJ's Structural Search with 'Variable is assigned to itself' lint.
 
 Enjoy more readable code!
