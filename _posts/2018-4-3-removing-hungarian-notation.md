@@ -1,3 +1,7 @@
+---
+layout: post
+title: Removing Hungarian Notation from Java project
+---
 If you hate Hungarian notation for it's unreadable format, you might experience hard time replacing it into standard Google Java Style variable notation. I found myself in this situation.
 
 There are couple ideas of how to change that:
