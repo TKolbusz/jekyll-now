@@ -13,7 +13,7 @@ Well, it is as simple as it sounds, it may work for small project but if you hav
 
 <b>2. IntelliJ structural search and replace</b>
 
-It is common idea to replace variable names automatically with IDE. It is easy to work with structural search, it will find all mVariables but structural replace is broken. I filed a bug to issue tracker without response. https://issuetracker.google.com/issues/68843136
+It is common idea to replace variable names automatically with IDE. It is easy to work with structural search, it will find all mVariables but structural replace is broken. [I filed a bug](https://issuetracker.google.com/issues/68843136) to issue tracker without response.
 
 <b>3. Writing custom script</b>
 
