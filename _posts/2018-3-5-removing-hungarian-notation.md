@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Removing Hungarian Notation from Java project
-draft: true
+draft: false
 ---
 If you hate Hungarian notation for it's unreadable format, you might experience hard time replacing it into standard Google Java Style variable notation. I found myself in this situation.
 
@@ -28,11 +28,17 @@ Caveats:
 
 1. It will brutally replace hungarian notation in a given directory so be careful, have a backup. 
 2. If you have field assignment from setter/constructor like 
-<script src="https://gist.github.com/TKolbusz/81d5688411c3cf9a0f47cb7e96966a5f.js"></script>
+{% highlight java %}
+mValue = value;
+{% endhighlight %}
 it will replace it with 
-<script src="https://gist.github.com/TKolbusz/f9724807907322a69d54c4469935c063.js"></script> 
+{% highlight java %}
+value = value;
+{% endhighlight %} 
 instead of
-<script src="https://gist.github.com/TKolbusz/99f383b1392f948a79d98a55983241d0.js"></script>
+{% highlight java %}
+this.value = value;
+{% endhighlight %}
 so be careful and test your code. Such bugs can be found by running IntelliJ's Structural Search with 'Variable is assigned to itself' lint.
 
 Enjoy more readable code!
